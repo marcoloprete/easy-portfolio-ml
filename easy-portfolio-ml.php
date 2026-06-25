@@ -255,9 +255,10 @@ function easy_portfolio_ml_slider_shortcode( $atts ) {
             $wrapper_classes[] = 'is-fullwidth';
         }
 
-        $output .= '<div class="' . esc_attr( implode( ' ', $wrapper_classes ) ) . '">';
+        $output .= '<section class="easy-portfolio-section">';
 
         if ( $has_title ) {
+            $output .= '<div class="easy-portfolio-section__inner">';
             $output .= '<div class="easy-portfolio-heading-container">';
             $output .= '<div class="easy-portfolio-heading">';
             $output .= '<h2 class="easy-portfolio-heading__title">';
@@ -276,8 +277,10 @@ function easy_portfolio_ml_slider_shortcode( $atts ) {
             $output .= '</h2>';
             $output .= '</div>';
             $output .= '</div>';
+            $output .= '</div>';
         }
 
+        $output .= '<div class="' . esc_attr( implode( ' ', $wrapper_classes ) ) . '">';
         $output .= '<div class="easy-portfolio-slider is-carousel" data-layout="carousel" data-peek="' . esc_attr( (string) $peek ) . '">';
 
         if ( $fullwidth ) {
@@ -311,6 +314,7 @@ function easy_portfolio_ml_slider_shortcode( $atts ) {
 
         $output .= '</div>';
         $output .= '</div>';
+        $output .= '</section>';
 
         wp_reset_postdata();
     }
