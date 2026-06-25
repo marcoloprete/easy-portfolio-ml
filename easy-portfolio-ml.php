@@ -257,8 +257,11 @@ function easy_portfolio_ml_slider_shortcode( $atts ) {
 
         $output .= '<section class="easy-portfolio-section">';
 
-        if ( $has_title ) {
+        if ( $has_title || ! $fullwidth ) {
             $output .= '<div class="easy-portfolio-section__inner">';
+        }
+
+        if ( $has_title ) {
             $output .= '<div class="easy-portfolio-heading-container">';
             $output .= '<div class="easy-portfolio-heading">';
             $output .= '<h2 class="easy-portfolio-heading__title">';
@@ -277,6 +280,9 @@ function easy_portfolio_ml_slider_shortcode( $atts ) {
             $output .= '</h2>';
             $output .= '</div>';
             $output .= '</div>';
+        }
+
+        if ( $fullwidth && $has_title ) {
             $output .= '</div>';
         }
 
@@ -314,6 +320,11 @@ function easy_portfolio_ml_slider_shortcode( $atts ) {
 
         $output .= '</div>';
         $output .= '</div>';
+
+        if ( ! $fullwidth ) {
+            $output .= '</div>';
+        }
+
         $output .= '</section>';
 
         wp_reset_postdata();
