@@ -1,0 +1,18 @@
+jQuery(document).ready(function($) {
+    $('.easy-portfolio-image').on('mouseenter', function() {
+        const $img = $(this).find('img');
+        const imgHeight = $img.height();
+        const containerHeight = $(this).height();
+
+        // Calcola la quantità esatta di spostamento
+        const translateYValue = containerHeight - imgHeight;
+
+        if (imgHeight > containerHeight) {
+            $img.css('transform', 'translateY(' + translateYValue + 'px)');
+        }
+    });
+
+    $('.easy-portfolio-image').on('mouseleave', function() {
+        $(this).find('img').css('transform', 'translateY(0)');
+    });
+});

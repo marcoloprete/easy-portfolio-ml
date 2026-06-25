@@ -1,0 +1,108 @@
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+.easy-portfolio-slider .easy-portfolio-image {
+  height: 800px;          /* aumenta o diminuisci qui */
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+}
+.easy-portfolio-slider .easy-portfolio-image img,
+.easy-portfolio-slider .easy-portfolio-image img.wp-post-image,
+.easy-portfolio-slider .easy-portfolio-image .wp-post-image {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  flex: 1 1 auto;
+}
+.easy-portfolio-slider .slick-slide {
+  padding: 0 15px;
+}
+.easy-portfolio-slider .slick-list {
+  margin: 0 -15px;
+}
+.easy-portfolio-slider .slick-prev,
+.easy-portfolio-slider .slick-next {
+  width: 44px;
+  height: 44px;
+  z-index: 20;
+}
+.easy-portfolio-slider .slick-prev:before,
+.easy-portfolio-slider .slick-next:before {
+  font-size: 34px;
+  color: #000; /* cambia colore se vuoi */
+  opacity: 1;
+}
+/* Posizionamento più esterno */
+.easy-portfolio-slider .slick-prev {
+  left: -50px;
+}
+
+.easy-portfolio-slider .slick-next {
+  right: -50px;
+}
+/* Mobile: frecce più interne */
+@media (max-width: 768px) {
+  .easy-portfolio-slider .slick-prev {
+    left: -10px;
+  }
+  .easy-portfolio-slider .slick-next {
+    right: -10px;
+  }
+}
+
+/* Dots */
+.easy-portfolio-slider .slick-dots{
+  position: static !important;  /* rende effettivo il margin */
+  bottom: auto !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  margin-top: 40px !important;
+  padding: 0;
+  display: flex !important;
+  justify-content: center;
+  gap: 12px;
+}
+.easy-portfolio-slider .slick-dots li{
+  width: auto;
+  height: auto;
+  margin: 0;
+}
+.easy-portfolio-slider .slick-dots li button{
+  width: 25px;
+  height: 25px;
+  padding: 0;
+}
+.easy-portfolio-slider .slick-dots li button:before{
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background: #2226;      /* colore normale */
+  opacity: 1;             /* importantissimo */
+}
+.easy-portfolio-slider .slick-dots li.slick-active button:before{
+  background: #0a0a0f;
+}
+.easy-portfolio-slider .slick-dots li button:hover:before{
+  background: #2368ff;
+}
+.easy-portfolio-slider .slick-dots li button:focus{
+  outline: none;
+}
+
+/* =============================
+   Portfolio Heading
+============================= */
+
+.easy-portfolio-heading-container{
+  max-width: 1600px;
+  margin: 0 auto;
+}
