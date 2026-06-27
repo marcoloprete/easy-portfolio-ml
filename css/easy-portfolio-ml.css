@@ -1,6 +1,10 @@
 .slick-dotted.slick-slider {
     margin-bottom: 0;
 }
+.easy-portfolio-image {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
 .easy-portfolio-slider .easy-portfolio-image {
   height: 800px;          /* aumenta o diminuisci qui */
   overflow: hidden;
@@ -96,6 +100,10 @@
 }
 .easy-portfolio-slider .slick-dots li button:focus{
   outline: none;
+}
+.easy-portfolio-title {
+  padding-top: 20px;
+  text-align: center;
 }
 
 /* =============================
