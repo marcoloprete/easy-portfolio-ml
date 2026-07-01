@@ -26,8 +26,15 @@
 .easy-portfolio-slider .slick-slide {
   padding: 0 15px;
 }
+.easy-portfolio-slider-wrapper {
+  max-width: 100%;
+  overflow: hidden;
+}
+
 .easy-portfolio-slider .slick-list {
+  max-width: 100%;
   margin: 0 -15px;
+  overflow: hidden;
 }
 .easy-portfolio-slider .slick-prev,
 .easy-portfolio-slider .slick-next {
@@ -118,6 +125,7 @@
 
 .easy-portfolio-section__inner {
   width: min(100% - 80px, 1600px);
+  max-width: 100%;
   margin-inline: auto;
 }
 
