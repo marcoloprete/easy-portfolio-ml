@@ -79,8 +79,8 @@ function easy_portfolio_save_link($post_id) {
 }
 
 function easy_portfolio_ml_enqueue_assets() {
-    $css_path  = plugin_dir_path(__FILE__) . 'css/easy-portfolio-ml.css';
-    $css_url   = plugin_dir_url(__FILE__) . 'css/easy-portfolio-ml.css';
+    $css_path  = plugin_dir_path(__FILE__) . 'css/easy-portfolio-ml.min.css';
+    $css_url   = plugin_dir_url(__FILE__) . 'css/easy-portfolio-ml.min.css';
 
     if ( file_exists( $css_path ) ) {
         wp_enqueue_style(
@@ -91,8 +91,8 @@ function easy_portfolio_ml_enqueue_assets() {
         );
     }
 
-    $base_js_path = plugin_dir_path(__FILE__) . 'js/easy-portfolio-ml.js';
-    $base_js_url  = plugin_dir_url(__FILE__) . 'js/easy-portfolio-ml.js';
+    $base_js_path = plugin_dir_path(__FILE__) . 'js/easy-portfolio-ml.min.js';
+    $base_js_url  = plugin_dir_url(__FILE__) . 'js/easy-portfolio-ml.min.js';
 
     if ( file_exists( $base_js_path ) ) {
         wp_enqueue_script(
